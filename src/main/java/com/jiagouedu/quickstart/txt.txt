@@ -1,0 +1,12 @@
+
+
+
+
+org.apache.rocketmq.client.impl.producer.DefaultMQProducerImpl
+  org.apache.rocketmq.client.producer.DefaultMQProducer.start 准备的工作
+   >org.apache.rocketmq.client.impl.producer.DefaultMQProducerImpl.send(org.apache.rocketmq.common.message.Message, long)
+     >org.apache.rocketmq.client.impl.producer.DefaultMQProducerImpl.sendDefaultImpl
+       >org.apache.rocketmq.client.impl.producer.DefaultMQProducerImpl.tryToFindTopicPublishInfo
+         >org.apache.rocketmq.client.impl.producer.DefaultMQProducerImpl.selectOneMessageQueue 从4个队列选择一个队列接受我这个消息
+           >org.apache.rocketmq.client.impl.producer.DefaultMQProducerImpl.sendKernelImpl 发送数据
+             >org.apache.rocketmq.common.protocol.header.SendMessageRequestHeader  消息 rokcetmq json
